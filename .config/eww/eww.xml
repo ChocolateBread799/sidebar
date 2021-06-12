@@ -1,0 +1,284 @@
+<eww>
+  <definitions>
+    <def name="bar">
+        <box/>
+    </def>
+    <def name="home">
+        <box/>
+    </def>
+  <def name="terminal">
+  <box/>
+</def>
+<def name="firefox">
+  <box/>
+</def>
+<def name="edit">
+  <box/>
+</def>
+<def name="folder">
+  <box/>
+</def>
+    <def name="main">
+        <box/>
+    </def>
+    <def name="sep">
+        <box/>
+    </def>
+    <def name="dock">
+        <box/>
+    </def>
+    <def name="shutdown">
+    <box orientation="h" space-evenly="true">
+      <box class="shutdown-btn" orientation="h" halign="center">
+          <button onclick="shutdown now"></button>
+        </box>
+    </box>
+</def>
+<def name="reboot">
+    <box orientation="h" space-evenly="true">
+      <box class="reboot-btn" orientation="h" halign="center">
+          <button onclick="reboot"></button>
+        </box>
+    </box>
+</def>
+<def name="quit">
+    <box orientation="h" space-evenly="true">
+      <box class="quit-btn" orientation="h" halign="center">
+          <button onclick="eww close shutdown & eww close reboot & eww close quit & eww close dock_power"></button>
+        </box>
+    </box>
+</def>
+    <def name="text">
+    <box orientation="v" space-evenly="true">
+        <box class="text">Welcome!</box>
+    </box>
+</def>
+<def name="powermenu">
+    <box orientation="v" space-evenly="true">
+        <box class="power-btn" orientation="v" space-evenly="true">
+            <button onclick="eww open-many  dock_power shutdown reboot quit"></button>
+        </box>
+    </box>
+</def>
+<def name="notification">
+    <box orientation="v" space-evenly="true">
+        <box class="notif-btn" orientation="v" space-evenly="true">
+            <button onclick="notifications.sh"></button>
+        </box>
+    </box>
+</def>
+    <def name="wm1">
+        <box orientation="h" class="workspaces" space-evenly="true" halign="start">
+          <button onclick="wmctrl -s 0">Home</button>
+        </box>
+    </def>
+      <def name="wm2">
+          <box orientation="h" class="workspaces" space-evenly="true" halign="start">
+            <button onclick="wmctrl -s 1">Terminal</button>
+          </box>
+      </def>
+        <def name="wm3">
+            <box orientation="h" class="workspaces" space-evenly="true" halign="start">
+              <button onclick="wmctrl -s 2">Firefox</button>
+            </box>
+        </def>
+          <def name="wm4">
+              <box orientation="h" class="workspaces" space-evenly="true" halign="start">
+                <button onclick="wmctrl -s 3">Edit</button>
+              </box>
+          </def>
+            <def name="wm5">
+                <box orientation="h" class="workspaces" space-evenly="true" halign="start">
+                  <button onclick="wmctrl -s 4">Files</button>
+                </box>
+            </def>
+<def name="date">
+    <box orientation="v" space-evenly="true">
+        <box orientation="h" class="time">
+            <box class="hour">{{hour}}</box>
+            <box class="semicolon">:</box>
+            <box class="minute">{{minute}}</box>
+          </box>
+       <box class="day">{{day}}</box>
+    </box>
+</def>
+</definitions>
+
+    <variables>
+      <!-- DATE VARS -->
+      <script-var name="minute" interval="10s">date "+%M"</script-var>
+      <script-var name="hour" interval="5m">date "+%H"</script-var>
+      <script-var name="day" interval="12h">~/.config/eww/scripts/getDay</script-var>
+
+        <!-- PLAYER VARS -->
+        <script-var name="art" interval="5s">~/.config/eww/scripts/echoSongArt</script-var>
+        <script-var name="song_title" interval="2s">~/.config/eww/scripts/getSongTitle</script-var>
+
+    </variables>
+
+    <windows>
+        <window name="bar" screen="0">
+            <geometry x="-10px" y="0px" width="200px" height="1080px"/>
+            <reserve side="top" distance="4%" layer="top"/>
+            <widget>
+                <bar/>
+            </widget>
+        </window>
+        <window name="powermenu">
+          <geometry x="55px" y="995px" width="25px" height="25px"/>
+          <widget>
+              <powermenu/>
+          </widget>
+        </window>
+        <window name="dock_power">
+            <geometry x="220px" y="855px" width="80px" height="200px"/>
+            <widget>
+                <dock/>
+            </widget>
+        </window>
+        <window name="shutdown">
+    <geometry x= "245px" y="880px" width="30px" height="30px"/>
+    <widget>
+        <shutdown/>
+    </widget>
+</window>
+<window name="reboot">
+    <geometry x="245px" y="940px" width="30px" height="30px"/>
+    <widget>
+        <reboot/>
+    </widget>
+</window>
+<window name="quit">
+    <geometry x="245px" y="1000px" width="30px" height="30px"/>
+    <widget>
+        <quit/>
+    </widget>
+</window>
+        <window name="notification">
+          <geometry x="115px" y="995px" width="25px" height="25px"/>
+          <widget>
+              <notification/>
+          </widget>
+        </window>
+        <window name="main">
+          <geometry x="20px" y="40px" width="150px" height="45px"/>
+          <widget>
+              <main/>
+          </widget>
+      </window>
+      <window name="main2">
+        <geometry x="20px" y="220px" width="150px" height="45px"/>
+        <widget>
+            <main/>
+        </widget>
+    </window>
+<window name="sep">
+  <geometry x="20px" y="150px" width="150px" height="3px"/>
+  <widget>
+      <sep/>
+  </widget>
+</window>
+<window name="sep2">
+  <geometry x="20px" y="650px" width="150px" height="3px"/>
+  <widget>
+      <sep/>
+  </widget>
+</window>
+<window name="sep3">
+  <geometry x="20px" y="930px" width="150px" height="3px"/>
+  <widget>
+      <sep/>
+  </widget>
+</window>
+<window name="dock">
+  <geometry x="20px" y="980px" width="155px" height="55px"/>
+  <widget>
+      <dock/>
+  </widget>
+</window>
+<window name="home">
+  <geometry x="40px" y="230px" width="25px" height="25px"/>
+  <widget>
+      <home/>
+  </widget>
+</window>
+<window name="terminal">
+  <geometry x="40px" y="310px" width="25px" height="25px"/>
+  <widget>
+      <terminal/>
+  </widget>
+</window>
+<window name="firefox">
+  <geometry x="40px" y="390px" width="25px" height="25px"/>
+  <widget>
+      <firefox/>
+  </widget>
+</window>
+<window name="edit">
+  <geometry x="40px" y="470px" width="25px" height="25px"/>
+  <widget>
+      <edit/>
+  </widget>
+</window>
+<window name="folder">
+  <geometry x="40px" y="550px" width="25px" height="25px"/>
+  <widget>
+      <folder/>
+  </widget>
+</window>
+      <window name="wm1">
+        <geometry x="20px" y="220px" width="150px" height="45px"/>
+        <widget>
+            <wm1/>
+        </widget>
+      </window>
+      <window name="wm2">
+        <geometry x="20px" y="300px" width="150px" height="45px"/>
+        <widget>
+            <wm2/>
+        </widget>
+      </window>
+      <window name="wm3">
+        <geometry x="20px" y="380px" width="150px" height="45px"/>
+        <widget>
+            <wm3/>
+        </widget>
+      </window>
+      <window name="wm4">
+        <geometry x="20px" y="460px" width="150px" height="45px"/>
+        <widget>
+            <wm4/>
+        </widget>
+      </window>
+      <window name="wm5">
+        <geometry x="20px" y="540px" width="150px" height="45px"/>
+        <widget>
+            <wm5/>
+        </widget>
+      </window>
+        <window name="launcher">
+            <geometry x="60px" y="40px" width="70px" height="70px"/>
+            <widget>
+                <launcher/>
+            </widget>
+        </window>
+        <window name="dock_launcher">
+            <geometry x="1480px" y="40px" width="70px" height="70px"/>
+            <widget>
+                <dock_launcher/>
+            </widget>
+        </window>
+<window name="text">
+    <geometry x="47px" y="49px" width="25px" height="25px"/>
+    <widget>
+        <text/>
+    </widget>
+</window>
+        <window name="date">
+            <geometry x="20px" y="710px" width="150px" height="100px"/>
+            <widget>
+                <date/>
+            </widget>
+        </window>
+    </windows>
+</eww>

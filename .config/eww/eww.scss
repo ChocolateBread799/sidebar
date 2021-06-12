@@ -1,0 +1,117 @@
+* {
+    all: unset;
+}
+
+.bar, .dock, .dock_power {
+  background-color: #ffffff;
+}
+
+.powermenu button, .notification button {
+  font-family: "Font Awesome 5 Free Solid";
+  color: #505969;
+  font-size: 20px;
+}
+
+.shutdown button, .reboot button, .quit button {
+  color: #505969;
+  font-family: "Font Awesome 5 Free Solid";
+  font-size: 25px;
+}
+
+.main {
+  background-color: #505969;
+}
+
+.wm1, .wm2, .wm3, .wm4, .wm5, .dock {
+  background-color: #e1e6ee;
+}
+
+.wm1 button {
+  margin: 0px 25px 0px 30px;
+  padding-left: 50px;
+  color: #505969;
+  font-family: "Inter";
+}
+
+.wm2 button {
+  margin: 0px 20px 0px 40px;
+  padding-left: 27px;
+  color: #505969;
+  font-family: "Inter";
+}
+
+.wm3 button {
+  margin: 0px 25px 0px 35px;
+  padding-left: 40px;
+  color: #505969;
+  font-family: "Inter";
+}
+
+.wm4 button {
+  margin: 0px 35px 0px 20px;
+  padding-left: 65px;
+  color: #505969;
+  font-family: "Inter";
+}
+
+.wm5 button {
+  margin: 0px 30px 0px 25px;
+  padding-left: 62px;
+  color: #505969;
+  font-family: "Inter";
+}
+
+.sep, .sep2 , .sep3{
+  background-color: #e8ecf3;
+  border-radius: 10px;
+}
+
+.home {
+  background-image: url("/home/k/.config/eww/icons/home.png");
+  background-size: 25px;
+}
+
+.terminal {
+  background-image: url("/home/k/.config/eww/icons/console.png");
+  background-size: 25px;
+}
+
+.firefox {
+  background-image: url("/home/k/.config/eww/icons/internet.png");
+  background-size: 25px;
+}
+
+.edit {
+  background-image: url("/home/k/.config/eww/icons/edit.png");
+  background-size: 25px;
+}
+
+.folder {
+  background-image: url("/home/k/.config/eww/icons/folder.png");
+  background-size: 25px;
+}
+
+.text {
+  font-family: "Inter";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #505969;
+}
+
+.time {
+    background-color: #e1e6ee;
+    font-size: 25px;
+    font-family: "Inter";
+    color: #505969;
+    font-weight: 700;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.day {
+  background-color: #e1e6ee;
+  font-size: 12px;
+  font-family: "Inter";
+  color: #505969;
+  font-weight: 700;
+}
