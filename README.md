@@ -2,4 +2,5 @@
 
 [picom](https://github.com/ibhagwan/picom)
 
-![2021-06-13-071447_1920x1080_scrot](https://user-images.githubusercontent.com/81292558/121777392-bd9ecd00-cbcc-11eb-92ec-a5229d7a9727.png)
+![2021-06-13-182834_1920x1080_scrot](https://user-images.githubusercontent.com/81292558/121791894-c1ad0800-cc29-11eb-8984-493fbe345776.png)
+
