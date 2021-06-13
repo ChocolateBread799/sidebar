@@ -1,24 +1,24 @@
 ! special
-*.foreground:   #262b37
-*.background:   #ffffff
-*.cursorColor:  #262b37
+*.foreground:   #3b4252
+*.background:   #eceff4
+*.cursorColor:  #3b4252
 
-*.color0:       #262b37
-*.color1:       #929497
-*.color2:       #949FAA
-*.color3:       #A8ADB2
-*.color4:       #B6BFC8
-*.color5:       #CBD1D7
-*.color6:       #D6DBE3
-*.color7:       #f2f5fa
-*.color8:       #425159
-*.color9:       #929497
-*.color10:      #949FAA
-*.color11:      #A8ADB2
-*.color12:      #B6BFC8
-*.color13:      #CBD1D7
-*.color14:      #D6DBE3
-*.color15:      #ffffff
+*.color0:  #3b4252
+*.color1:   #bf616a
+*.color2:   #a3be8c
+*.color3:  #ebcb8b
+*.color4:  #81a1c1
+*.color5:  #b48ead
+*.color6:   #88c0d0
+*.color7:  #e5e9f0
+*.color8:  #4c566a
+*.color9:  #bf616a
+*.color10:  #a3be8c
+*.color11:  #ebcb8b
+*.color12:  #81a1c1
+*.color13:  #b48ead
+*.color14:  #8fbcbb
+*.color15:   #eceff4
 
 *font: xft:Roboto Mono:size=14
 
@@ -28,7 +28,6 @@
 *geometry:              50x20
 *internalBorder:        30
 *scrollBar:             false
-
 
 ! xft fonts settings
 Xft.autohint:           0
